@@ -1,268 +1,204 @@
+
+
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OBSIDDYN — Invite Only</title>  <!-- Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBSIDDYN — Recognition Required</title>  <!-- Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
     body{
-      background:#020202;
+      background:#050505;
       color:white;
-      font-family:'Inter',sans-serif;
+      font-family:'Inter', sans-serif;
       overflow-x:hidden;
     }
 
     h1,h2,h3{
-      font-family:'Playfair Display',serif;
+      font-family:'Playfair Display', serif;
       letter-spacing:.08em;
     }
 
     section{
-      padding:120px 24px;
+      padding:140px 24px;
       text-align:center;
-    }
-
-    /* PRELOADER */
-    #preloader{
-      position:fixed;
-      inset:0;
-      background:black;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
-      transition:opacity 1.2s ease;
-    }
-
-    #preloader h1{
-      letter-spacing:1em;
-      font-size:18px;
-      animation:spacing 2.5s ease forwards;
-    }
-
-    @keyframes spacing{
-      from{letter-spacing:.3em;opacity:0}
-      to{letter-spacing:1em;opacity:1}
     }
 
     /* HERO */
     .hero{
       height:100vh;
-      position:relative;
       display:flex;
+      flex-direction:column;
       justify-content:center;
       align-items:center;
-      overflow:hidden;
-    }
-
-    video{
-      position:absolute;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      opacity:.7;
-    }
-
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.8));
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
       text-align:center;
-      padding:0 20px;
     }
 
     .hero h1{
       font-size:14vw;
+      letter-spacing:.15em;
     }
 
-    .tagline{
-      letter-spacing:.7em;
-      font-size:10px;
-      margin-top:18px;
+    .statement{
+      margin-top:20px;
+      font-size:14px;
+      letter-spacing:.5em;
       opacity:.7;
     }
 
     /* BUTTON */
     .btn{
-      margin-top:36px;
-      padding:18px 44px;
+      margin-top:50px;
+      padding:18px 46px;
       border-radius:40px;
-      border:none;
-      background:white;
-      color:black;
-      font-weight:500;
+      border:1px solid white;
+      background:transparent;
+      color:white;
       cursor:pointer;
-      transition:.35s;
+      transition:.4s;
+      letter-spacing:.25em;
     }
 
     .btn:hover{
-      transform:scale(1.06);
+      background:white;
+      color:black;
     }
 
-    /* EMAIL GATE */
-    .gate{
-      max-width:520px;
+    /* INITIATION */
+    .initiation{
+      max-width:600px;
       margin:auto;
     }
 
     input{
       width:100%;
       padding:18px;
-      margin-top:26px;
+      margin-top:30px;
       border-radius:30px;
-      border:1px solid rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.2);
       background:transparent;
       color:white;
       font-size:15px;
     }
 
-    input::placeholder{color:rgba(255,255,255,.4)}
+    input::placeholder{
+      color:rgba(255,255,255,.4);
+    }
 
     .micro{
       margin-top:14px;
       font-size:11px;
-      letter-spacing:.25em;
-      opacity:.45;
-    }
-
-    /* COUNTDOWN */
-    .countdown{
-      font-size:clamp(32px,6vw,72px);
-      letter-spacing:.15em;
-      margin-top:20px;
+      letter-spacing:.3em;
+      opacity:.5;
     }
 
     /* DROP */
-    .drop-card{
-      width:320px;
-      height:420px;
-      margin:60px auto;
-      border-radius:46px;
-      background:linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,0));
-      box-shadow:0 70px 160px rgba(255,255,255,.12);
-      transition:1s;
+    .drop-text{
+      font-size:clamp(32px,6vw,70px);
+      line-height:1.2;
     }
 
-    .drop-card:hover{
-      transform:rotateY(14deg) scale(1.05);
+    /* INNER CHAMBER */
+    #vault{
+      position:fixed;
+      inset:0;
+      background:black;
+      display:none;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      z-index:9999;
+      padding:20px;
     }
 
     footer{
       padding:80px 20px;
-      border-top:1px solid rgba(255,255,255,.06);
+      border-top:1px solid rgba(255,255,255,.08);
       text-align:center;
       letter-spacing:.5em;
       font-size:11px;
       opacity:.5;
     }
 
-  </style></head><body><!-- PRELOADER --><div id="preloader">
+  </style></head><body><!-- HERO --><section class="hero">
   <h1>OBSIDDYN</h1>
-  <p style="margin-top:20px;letter-spacing:.6em;font-size:10px;opacity:.6">RECOGNITION REQUIRED</p>
-</div><!-- HERO --><section class="hero">
-  <video autoplay muted loop playsinline src="https://cdn.coverr.co/videos/coverr-ink-in-water-1570/1080p.mp4"></video>
-  <div class="overlay"></div>  <div class="hero-content">
-    <h1>OBSIDDYN</h1>
-    <div class="tagline">RARE BY DESIGN</div>
-    <button class="btn" onclick="scrollToGate()">Request Invitation</button>
-  </div>
-</section><!-- EMAIL GATE --><section>
-  <div class="gate">
-    <h2 style="font-size:clamp(28px,6vw,54px)">
-      Entry Is Not Public.
-    </h2><p style="opacity:.6;margin-top:18px;line-height:1.6">
-  Submit your email for recognition. Invitations are granted selectively.
+  <div class="statement">FOR THE FEW</div>
+  <div class="statement" style="opacity:.45">You were not meant to find us.</div>  <button class="btn" onclick="scrollToInitiation()">
+    REQUEST RECOGNITION
+  </button>
+</section><!-- DROP TEASER --><section>
+  <h2 class="drop-text">
+    INITIATION I<br><br>
+    150 MEMBERS<br>
+    NO RESTOCKS<br><br>
+    Arrival: Imminent
+  </h2>
+</section><!-- INITIATION LIST --><section id="initiation">
+  <div class="initiation">
+    <h2>THE INITIATION LIST</h2><p style="opacity:.6;margin-top:16px">
+  Submission does not guarantee acceptance.
 </p>
 
-<input placeholder="Enter email for recognition" />
-<button class="btn">Request Access</button>
+<form action="https://formspree.io/f/xojnvabr" method="POST">
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter email for recognition"
+    required
+  >
 
-<div class="micro">OBSERVATION DOES NOT GUARANTEE ENTRY</div>
+  <button class="btn">SUBMIT FOR REVIEW</button>
+</form>
+
+<div class="micro">
+  OBSERVATION DOES NOT GUARANTEE ENTRY
+</div>
 
   </div>
-</section><!-- COUNTDOWN --><section>
-  <p style="letter-spacing:.5em;font-size:11px;opacity:.5">
-    DROP 01 INITIATES IN
-  </p>  <div class="countdown" id="countdown"></div>
-</section><!-- MANIFESTO --><section>
-  <h2 style="font-size:clamp(28px,6vw,64px); line-height:1.2; max-width:900px; margin:auto;">
-    Some wear brands.<br>
-    Others enter mythologies.
-  </h2>
-</section><!-- DROP --><section>
-  <div class="drop-card"></div>  <p style="letter-spacing:.6em;font-size:11px;opacity:.6">DROP 01 — LIMITED TO 150</p>
-  <h3 style="font-size:52px;margin:18px 0">NOIR COAT</h3><button class="btn">Enter Drop</button>
-
-</section><section>
-  <h2 style="font-size:clamp(40px,9vw,120px);">
-    IF YOU UNDERSTAND 
-       YOU BELONG.
-  </h2>
-</section><footer>
-© 2026 OBSIDDYN — INVITE ONLY
+</section><!-- INNER CHAMBER BUTTON --><section>
+  <button class="btn" onclick="openVault()">
+    ENTER INNER CHAMBER
+  </button>
+</section><!-- VAULT --><div id="vault">
+  <h2>INNER CHAMBER</h2>
+  <p style="opacity:.6;margin-top:10px">Authorized individuals only.</p>  <input id="vaultPass" type="password" placeholder="Enter the Vault Key">
+  <button class="btn" onclick="unlockVault()">ENTER</button>  <p id="error" style="color:#ff4d4d;margin-top:10px;display:none">
+    Access Denied
+  </p>
+</div><footer>
+© 2026 OBSIDDYN — RECOGNITION REQUIRED
 </footer><script>
-  // Preloader
-  setTimeout(()=>{
-    document.getElementById('preloader').style.opacity='0';
-    setTimeout(()=>{
-      document.getElementById('preloader').style.display='none';
-    },1200);
-  },2600);
 
-  // Smooth scroll
-  function scrollToGate(){
-    window.scrollTo({top:window.innerHeight,behavior:'smooth'});
+function scrollToInitiation(){
+  document.getElementById('initiation').scrollIntoView({behavior:'smooth'});
+}
+
+function openVault(){
+  document.getElementById('vault').style.display='flex';
+}
+
+function unlockVault(){
+  const pass = document.getElementById('vaultPass').value;
+  const correct = "NOIR-X91"; // CHANGE THIS PASSWORD
+
+  if(pass === correct){
+    document.getElementById('vault').innerHTML = `
+      <h2>YOU ARE EARLY</h2>
+      <p style="opacity:.6;margin-top:20px">
+        Observe quietly.<br><br>
+        INITIATION I is approaching.
+      </p>
+    `;
+  }else{
+    document.getElementById('error').style.display='block';
   }
+}
 
-  // Countdown
-  const dropDate = new Date();
-  dropDate.setDate(dropDate.getDate()+7); // Drop in 7 days
-
-  function updateCountdown(){
-    const now = new Date();
-    const diff = dropDate - now;
-
-    const d = Math.floor(diff/(1000*60*60*24));
-    const h = Math.floor((diff/(1000*60*60))%24);
-    const m = Math.floor((diff/1000/60)%60);
-
-    document.getElementById("countdown").innerHTML =
-      `${d}D ${h}H ${m}M`;
-  }
-
-  setInterval(updateCountdown,1000);
-  updateCountdown();
-</script><!-- PASSWORD GATE --><div id="vault" style="position:fixed;inset:0;background:#000;display:none;align-items:center;justify-content:center;z-index:10000;flex-direction:column;text-align:center;padding:20px;">
-  <h2 style="font-size:32px;letter-spacing:.3em">PRIVATE ARCHIVE</h2>
-  <p style="opacity:.6;margin-top:12px">Authorized individuals only.</p>  <input id="vaultPass" type="password" placeholder="Enter password" style="max-width:320px" />
-  <button class="btn" onclick="unlockVault()">Enter Archive</button>  <p id="error" style="color:#ff4d4d;margin-top:10px;display:none">Access denied</p>
-</div><!-- SECRET PAGE --><section id="archive" style="display:none;min-height:100vh;background:#000;text-align:center;padding-top:160px">
-  <h1 style="font-size:64px">THE ARCHIVE</h1>
-  <p style="opacity:.6;margin-top:20px">If you are here, you were meant to be.</p>  <div class="drop-card"></div>  <p style="letter-spacing:.5em;font-size:11px;opacity:.5">OBJECT 00 — FOUNDER SPECIMEN</p>
-  <h3 style="font-size:42px;margin-top:10px">OBSIDIAN VEIL</h3>
-</section><script>
-  function openVault(){
-    document.getElementById('vault').style.display='flex';
-  }
-
-  function unlockVault(){
-       const pass =           document.getElementById('vaultPass').value;
-const correct = "NOIR-X91";
-    
-
-    if(pass === correct){
-      document.getElementById('vault').style.display='none';
-      document.getElementById('archive').style.display='block';
-      window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
-    }else{
-      document.getElementById('error').style.display='block';
-    }
-  }
 </script></body>
 </html>
+  
