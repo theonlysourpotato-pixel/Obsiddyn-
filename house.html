@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The House — OBSIDDYN</title>
+<title>OBSIDDYN — House</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -18,91 +18,122 @@ box-sizing:border-box;
 
 body{
 background:#050505;
-color:#e8e8e8;
-font-family:'Inter', sans-serif;
+color:white;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
 }
 
 /* NAV */
 
-nav{
-padding:30px 60px;
+.nav{
+position:fixed;
+top:0;
+width:100%;
+padding:28px;
 display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-width:90px;
-opacity:.9;
-}
-
-.nav-link{
-text-decoration:none;
-color:#aaa;
-letter-spacing:.25em;
-font-size:12px;
-}
-
-.nav-link:hover{
-color:white;
+justify-content:center;
+letter-spacing:.35em;
+font-size:11px;
+background:linear-gradient(to bottom, rgba(5,5,5,.9), transparent);
 }
 
 /* HERO */
 
 .hero{
-height:80vh;
+height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:40px;
 }
 
+.hero img{
+width:90px;
+margin-bottom:40px;
+opacity:.9;
+}
+
 .hero h1{
-font-family:'Playfair Display', serif;
-font-size: clamp(40px,6vw,90px);
-letter-spacing:.15em;
+font-family:'Playfair Display',serif;
+font-size:64px;
+letter-spacing:.18em;
 font-weight:500;
+margin-bottom:20px;
 }
 
-/* PHILOSOPHY */
-
-.philosophy{
-max-width:900px;
-margin:120px auto;
-text-align:center;
-line-height:2;
-font-size:18px;
-opacity:.85;
-padding:0 30px;
+.manifesto{
+max-width:720px;
+line-height:1.9;
+font-size:15px;
+letter-spacing:.08em;
+opacity:.75;
 }
-
-/* DIVIDER */
 
 .divider{
-height:1px;
-width:60%;
-background:#222;
-margin:120px auto;
+width:1px;
+height:80px;
+background:white;
+opacity:.2;
+margin:60px 0;
 }
 
-/* POWER STATEMENT */
+/* MEMBERSHIP STRIP */
 
-.statement{
+.strip{
+padding:140px 30px;
 text-align:center;
-font-family:'Playfair Display', serif;
-font-size:28px;
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.strip h2{
+font-family:'Playfair Display',serif;
+font-weight:500;
+letter-spacing:.15em;
+margin-bottom:20px;
+}
+
+.strip p{
+opacity:.6;
 letter-spacing:.08em;
-margin-bottom:120px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+height:420px;
+display:flex;
+align-items:flex-end;
+padding:40px;
+border-right:1px solid rgba(255,255,255,.05);
+border-bottom:1px solid rgba(255,255,255,.05);
+transition:.6s;
+}
+
+.card:hover{
+background:rgba(255,255,255,.03);
+}
+
+.card h3{
+font-family:'Playfair Display',serif;
+letter-spacing:.12em;
+font-weight:500;
 }
 
 /* FOOTER */
 
-footer{
+.footer{
+padding:120px 20px;
 text-align:center;
-padding:60px;
 font-size:11px;
-letter-spacing:.3em;
+letter-spacing:.4em;
 opacity:.4;
 }
 
@@ -111,50 +142,65 @@ opacity:.4;
 
 <body>
 
-<nav>
-<img src="obsiddyn-mark.png" class="logo">
-
-<a href="index.html" class="nav-link">
-RETURN TO GATE
-</a>
-</nav>
-
+<div class="nav">
+OBSIDDYN HOUSE
+</div>
 
 <section class="hero">
+
+<img src="obsiddyn-mark.png">
+
 <h1>THE HOUSE</h1>
-</section>
 
+<div class="manifesto">
+OBSIDDYN is not entered.  
+It is recognized.
 
-<section class="philosophy">
+We do not create for the many.  
+We refine for the rare.
 
-<p>
-OBSIDDYN exists beyond trend and season.
-</p>
-
-<br>
-
-<p>
-Created for those who understand presence without introduction.
-</p>
-
-<br>
-
-<p>
-We do not pursue attention.<br>
-We recognize it.
-</p>
-
-</section>
+Presence over visibility.  
+Silence over noise.  
+Legacy over trend.
+</div>
 
 <div class="divider"></div>
 
-<div class="statement">
-Unknown to the many.
+</section>
+
+<section class="strip">
+
+<h2>PRIVATE RELEASE I</h2>
+
+<p>
+150 MEMBERS • NO RESTOCKS • NUMBERED PIECES
+</p>
+
+</section>
+
+<section class="grid">
+
+<div class="card">
+<h3>GARMENTS</h3>
 </div>
 
-<footer>
-OBSIDDYN — RECOGNITION REQUIRED
-</footer>
+<div class="card">
+<h3>OBJECTS</h3>
+</div>
+
+<div class="card">
+<h3>ARCHIVE</h3>
+</div>
+
+<div class="card">
+<h3>INITIATION</h3>
+</div>
+
+</section>
+
+<div class="footer">
+OBSIDDYN
+</div>
 
 </body>
 </html>
