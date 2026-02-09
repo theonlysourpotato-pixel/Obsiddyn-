@@ -148,11 +148,25 @@ font-size:11px;
 letter-spacing:.4em;
 opacity:.4;
 }
+.enter{
+    animation:enterHouse 1.8s cubic-bezier(.77,0,.18,1) forwards;
+    transform:scale(1.04);
+    filter:blur(6px);
+    opacity:0;
+}
+
+@keyframes enterHouse{
+    to{
+        transform:scale(1);
+        filter:blur(0);
+        opacity:1;
+    }
+}
 
 </style>
 </head>
 
-<body>
+<body class="enter">
 
 <div class="nav">
 OBSIDDYN HOUSE
