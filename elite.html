@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Issue 00 — OBSIDDYN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:#eaeaea;
+font-family:'Inter',sans-serif;
+}
+
+/* layout */
+
+.wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:100vh;
+}
+
+/* image side */
+
+.image{
+background:url('https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+}
+
+/* text side */
+
+.info{
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:80px;
+}
+
+/* artifact name */
+
+.issue{
+letter-spacing:.35em;
+font-size:12px;
+opacity:.5;
+margin-bottom:20px;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-weight:500;
+letter-spacing:.08em;
+margin-bottom:30px;
+}
+
+/* description */
+
+.desc{
+opacity:.7;
+line-height:1.9;
+max-width:420px;
+margin-bottom:40px;
+}
+
+/* price */
+
+.price{
+margin-bottom:40px;
+letter-spacing:.1em;
+}
+
+/* button */
+
+button{
+padding:16px 36px;
+background:transparent;
+border:1px solid rgba(255,255,255,.3);
+color:white;
+letter-spacing:.2em;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+border-color:white;
+}
+
+/* micro */
+
+.micro{
+margin-top:20px;
+font-size:11px;
+opacity:.35;
+letter-spacing:.15em;
+}
+
+@media(max-width:900px){
+.wrap{
+grid-template-columns:1fr;
+}
+
+.image{
+height:55vh;
+}
+
+.info{
+padding:40px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="image"></div>
+
+<div class="info">
+
+<div class="issue">
+ISSUE 00
+</div>
+
+<h1>THE CEREMONIAL JACKET</h1>
+
+<div class="desc">
+Engineered for controlled environments.<br>
+Structured to command posture.<br>
+Issued without announcement.
+</div>
+
+<div class="price">
+$820
+</div>
+
+<button>
+REQUEST ISSUANCE
+</button>
+
+<div class="micro">
+Issuance subject to recognition.
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
