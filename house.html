@@ -9,8 +9,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 
-
 <style>
+.logo{
+    width:140px;
+    display:block;
+    margin:0 auto 80px auto;
+
+    /* Metallic effect */
+    filter:
+        contrast(1.15)
+        brightness(1.1)
+        drop-shadow(0 6px 18px rgba(255,255,255,0.08))
+        drop-shadow(0 0 35px rgba(255,255,255,0.06));
+
+    transition: transform 1.2s cubic-bezier(.19,1,.22,1),
+                opacity 1.2s ease;
+}
+
+/* Subtle hover elevation */
+.logo:hover{
+    transform: translateY(-4px) scale(1.03);
+}
+
 /* HERO SECTION — Ultra Luxury */
 
 .hero{
@@ -241,7 +261,7 @@ OBSIDDYN HOUSE
 
 <section class="hero reveal">
 
-<img src="obsiddyn-mark.png">
+<img src="obsiddyn-mark-v2.png" class="logo">
 
 <h1>THE HOUSE</h1>
 
