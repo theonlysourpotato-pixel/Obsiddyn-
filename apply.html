@@ -24,7 +24,7 @@ form{
 }
 
 h1{
-    font-size:20px;
+    font-size:18px;
     letter-spacing:.3em;
     margin-bottom:40px;
     text-align:center;
@@ -63,14 +63,14 @@ button:hover{
 
 <body>
 
-<form>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 <h1>REQUEST ENTRY</h1>
 
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="text" placeholder="City / Country" required>
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="location" placeholder="City / Country" required>
 
-<select required>
+<select name="size" required>
 <option value="">Select Size</option>
 <option>S</option>
 <option>M</option>
@@ -78,7 +78,7 @@ button:hover{
 <option>XL</option>
 </select>
 
-<textarea placeholder="Reason for Request (Optional)"></textarea>
+<textarea name="reason" placeholder="Reason for Request (Optional)"></textarea>
 
 <button type="submit">SUBMIT</button>
 
