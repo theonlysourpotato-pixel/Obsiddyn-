@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application — OBSIDDYN</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b0b0b;
+    color:#eaeaea;
+    font-family:'Inter', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    padding:24px;
+}
+
+form{
+    max-width:420px;
+    width:100%;
+}
+
+h1{
+    font-size:20px;
+    letter-spacing:.3em;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+input, select, textarea{
+    width:100%;
+    background:transparent;
+    border:1px solid #444;
+    color:#eaeaea;
+    padding:14px;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:80px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:transparent;
+    border:1px solid #888;
+    color:#eaeaea;
+    letter-spacing:.2em;
+    cursor:pointer;
+}
+
+button:hover{
+    border-color:white;
+}
+</style>
+</head>
+
+<body>
+
+<form>
+<h1>REQUEST ENTRY</h1>
+
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="City / Country" required>
+
+<select required>
+<option value="">Select Size</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<textarea placeholder="Reason for Request (Optional)"></textarea>
+
+<button type="submit">SUBMIT</button>
+
+</form>
+
+</body>
+</html>
